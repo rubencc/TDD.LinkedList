@@ -5,7 +5,7 @@ namespace TDD.LinkedList
     public sealed class Node<T> where T: class
     {
         private Node<T> next;
-        public T Content { get; set; }
+        public T Content { get; }
 
         public Node(T data)
         {
@@ -23,6 +23,21 @@ namespace TDD.LinkedList
         public Node<T> GetNext()
         {
             return this.next;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return this.Content.Equals((T)obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return this.Content.GetHashCode();
+        }
+
+        public override string ToString()
+        {
+            return this.Content.ToString();
         }
     }
 }
