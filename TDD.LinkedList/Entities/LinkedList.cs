@@ -30,11 +30,6 @@
             return null;
         }
 
-        public T Pop(int index)
-        {
-            return null;
-        }
-
         public void Remove(T data)
         {
             
