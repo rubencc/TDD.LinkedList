@@ -25,16 +25,6 @@ namespace TDD.LinkedList
             return this.next;
         }
 
-        public override bool Equals(object obj)
-        {
-            return this.Content.Equals((T)obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return this.Content.GetHashCode();
-        }
-
         public override string ToString()
         {
             return this.Content.ToString();

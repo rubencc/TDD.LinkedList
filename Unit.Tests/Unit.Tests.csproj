@@ -82,6 +82,12 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TDD.LinkedList\TDD.LinkedList.csproj">
+      <Project>{b3686c0c-4a86-4444-9d5d-7e5487042064}</Project>
+      <Name>TDD.LinkedList</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
