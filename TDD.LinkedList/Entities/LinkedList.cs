@@ -63,5 +63,10 @@ namespace TDD.LinkedList
         {
             throw new NotImplementedException();
         }
+
+        public void Reverse()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

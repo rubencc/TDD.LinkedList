@@ -269,5 +269,27 @@ namespace Unit.Tests
         }
         #endregion
 
+        #region Reverse
+        [TestMethod]
+        public void T16_Reverse_Succeed()
+        {
+            //Arrange
+            LinkedList<string> lst = new LinkedList<string>();
+            lst.Add("primer elemento");
+            lst.Add("segundo elemento");
+            lst.Add("tercero elemento");
+            lst.Add("cuarto elemento");
+
+            //Act
+            lst.Reverse();
+
+            //Assert
+            lst.Get().Should().Be("cuarto elemento");
+            lst.Get().Should().Be("tercero elemento");
+            lst.Get().Should().Be("segundo elemento");
+            lst.Get().Should().Be("primer elemento");
+        }
+
+        #endregion
     }
 }
