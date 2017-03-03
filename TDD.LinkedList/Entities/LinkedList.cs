@@ -34,5 +34,11 @@ namespace TDD.LinkedList
         {
             return this.list.Last();
         }
+
+
+        public string Search(string secondElement)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
