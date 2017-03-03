@@ -45,5 +45,10 @@ namespace TDD.LinkedList
             throw new NotImplementedException();
         }
 
+        public void Clear()
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }
