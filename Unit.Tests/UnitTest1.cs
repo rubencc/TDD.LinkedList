@@ -28,5 +28,18 @@ namespace Unit.Tests
             lst.Count().Should().Be(0);
         }
 
+        [TestMethod]
+        public void T3_Search_Element_Suceed()
+        {
+            LinkedList<string> lst = new LinkedList<string>();
+            lst.Add("primer elemento");
+            lst.Add("second elemento");
+
+            <T> result = new <T>();
+            result = lst.Search("second element");
+
+            result.ToString().Should().Be("second element");
+        }
+
     }
 }
