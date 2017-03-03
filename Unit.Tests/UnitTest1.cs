@@ -45,7 +45,7 @@ namespace Unit.Tests
             lst.Add("second elemento");
 
             //Act
-            bool result = lst.Contains("second element");
+            bool result = lst.Contains("second elemento");
 
             //Assert
             result.Should().BeTrue();
