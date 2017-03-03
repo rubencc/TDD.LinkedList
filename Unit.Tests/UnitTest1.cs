@@ -173,5 +173,18 @@ namespace Unit.Tests
             result.Should().Be(true);
         }
 
+        [TestMethod]
+        public void T16_Remove_By_Index_Failed()
+        {
+            LinkedList<string> lst = new LinkedList<string>();
+            lst.Add("primer elemento");
+            lst.Add("segundo elemento");
+            lst.Add("tercero elemento");
+            lst.Add("cuarto elemento");
+
+            bool result = lst.RemoveByIndex(6);
+            result.Should().Be(false);
+        }
+
     }
 }
