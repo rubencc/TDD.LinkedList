@@ -150,7 +150,7 @@ namespace Unit.Tests
         }
 
         [TestMethod]
-        public void T12_Get_Index_Not_Found()
+        public void T11_Get_Index_Not_Found()
         {
             //Arrange
             LinkedList<string> lst = new LinkedList<string>();
@@ -165,7 +165,7 @@ namespace Unit.Tests
         }
 
         [TestMethod]
-        public void T13_InsertAt_Succeed()
+        public void T12_InsertAt_Succeed()
         {
             //Arrange
             LinkedList<string> lst = new LinkedList<string>();
@@ -183,7 +183,7 @@ namespace Unit.Tests
         }
 
         [TestMethod]
-        public void T15_InsertAt_Failed()
+        public void T13_InsertAt_Failed()
         {
             //Arrange
             LinkedList<string> lst = new LinkedList<string>();
@@ -218,7 +218,7 @@ namespace Unit.Tests
         }
 
         [TestMethod]
-        public void T16_Remove_By_Index_Failed()
+        public void T15_Remove_By_Index_Failed()
         {
             //Arrange
             LinkedList<string> lst = new LinkedList<string>();
