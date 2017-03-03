@@ -133,13 +133,7 @@ namespace Unit.Tests
 
         }
 
-        [TestMethod]
-        public void T12_Count_EmptyList_Failed()
-        {
-            LinkedList<string> lst = new LinkedList<string>();
-
-            lst.Count().Should().NotBe(0);
-        }
+        
 
 
     }
