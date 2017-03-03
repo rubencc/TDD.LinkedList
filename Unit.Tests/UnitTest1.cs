@@ -121,6 +121,18 @@ namespace Unit.Tests
           
         }
 
+        [TestMethod]
+        public void T11_Clear_Failed()
+        {
+            LinkedList<string> lst = new LinkedList<string>();
+            lst.Add("primer elemento");
+            lst.Add("segundo elemento");
+            lst.Clear();
+
+            lst.Count().Should().Be(2);
+
+        }
+
 
     }
 }
