@@ -62,7 +62,7 @@ namespace Unit.Tests
         public void T5_Count_EmptyList_Succeed()
         {
             LinkedList<string> lst = new LinkedList<string>();
-            
+
             lst.Count().Should().Be(0);
         }
 
@@ -95,7 +95,7 @@ namespace Unit.Tests
 
             rtn.Should().BeFalse();
         }
-       
+
 
         [TestMethod]
         public void T8_Add_TwoElements_Succeed()
@@ -118,7 +118,7 @@ namespace Unit.Tests
             lst.Clear();
 
             lst.Count().Should().Be(0);
-          
+
         }
 
         [TestMethod]
@@ -165,12 +165,28 @@ namespace Unit.Tests
             string elementToInsert = "Inserted element";
 
             lst.InsertAt(1, elementToInsert);
-            
+
             int returnedIndex = lst.Index(elementToInsert);
 
             returnedIndex.Should().Be(1);
 
         }
 
+        [TestMethod]
+        public void T15_InsertAt_Failed()
+        {
+            LinkedList<string> lst = new LinkedList<string>();
+            lst.Add("primer elemento");
+            lst.Add("segundo elemento");
+
+            string elementToInsert = "Inserted element";
+
+            lst.InsertAt(10, elementToInsert);
+
+            int returnedIndex = lst.Index(elementToInsert);
+
+            returnedIndex.Should().Be(-1);
+
+        }
     }
 }
