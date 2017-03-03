@@ -110,6 +110,32 @@ namespace Unit.Tests
         }
 
         [TestMethod]
+        public void T9_Clear_Succeed()
+        {
+            LinkedList<string> lst = new LinkedList<string>();
+            lst.Add("primer elemento");
+            lst.Add("segundo elemento");
+            lst.Clear();
+
+            lst.Count().Should().Be(0);
+          
+        }
+
+        [TestMethod]
+        public void T11_Clear_Failed()
+        {
+            LinkedList<string> lst = new LinkedList<string>();
+            lst.Add("primer elemento");
+            lst.Add("segundo elemento");
+            lst.Clear();
+
+            lst.Count().Should().Be(2);
+
+        }
+
+        
+
+        [TestMethod]
         public void T10_Get_Index_Succeed()
         {
             LinkedList<string> lst = new LinkedList<string>();
