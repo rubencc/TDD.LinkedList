@@ -34,5 +34,15 @@ namespace TDD.LinkedList
         {
             return this.list.Last();
         }
+
+        public void Remove(string v)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string Search(string v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

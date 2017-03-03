@@ -37,6 +37,53 @@ namespace Unit.Tests
         }
 
         [TestMethod]
+        public void T3_Search_Element_Suceed()
+        {
+            LinkedList<string> lst = new LinkedList<string>();
+            lst.Add("primer elemento");
+            lst.Add("second elemento");
+
+            string result = lst.Search("second element");
+
+            result.ToString().Should().Be("second element");
+        }
+
+        [TestMethod]
+        public void T4_Remove_Element_Succeed()
+        {
+            //Arrange
+            LinkedList<string> lst = new LinkedList<string>();
+            lst.Add("primer elemento");
+
+
+            //Act
+
+            lst.Remove("primer elemento");
+
+            //Assert
+            string rtn = lst.Search("primer elemento");
+
+            lst.Should().BeNull(rtn);
+        }
+
+        [TestMethod]
+        public void T4_Remove_Element_Failed()
+        {
+            //Arrange
+            LinkedList<string> lst = new LinkedList<string>();
+            lst.Add("not exist element");
+
+
+            //Act
+
+            lst.Remove("not exist element");
+            string rtn = lst.Search("not exist element");
+
+            //Assert
+
+            lst.Should().NotBeNull(rtn);
+        }
+        [TestMethod]
         public void T6_Count_OneElementList_Succeed()
         {
             LinkedList<string> lst = new LinkedList<string>();
