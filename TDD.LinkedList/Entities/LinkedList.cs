@@ -24,7 +24,10 @@ namespace TDD.LinkedList
 
         public void Add(T v)
         {
-            list.Add(v);
+            if (v != null)
+            {
+                list.Add(v);
+            }
         }
 
         public T Get()
