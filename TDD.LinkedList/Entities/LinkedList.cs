@@ -57,7 +57,36 @@ namespace TDD.LinkedList
             return this.node.Content;
         }
 
-        public void Remove(string v)
+        public void Remove(T v)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Contains(T v)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Clear()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void InsertAt(int v, T elementToInsert)
+        {
+            throw new NotImplementedException();
+        }
+        public int Index(T segundoElemento)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool RemoveByIndex(int i)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Reverse()
         {
             throw new NotImplementedException();
         }
@@ -94,6 +123,11 @@ namespace TDD.LinkedList
 
 
             return el;
+        }
+
+        public bool ChangePosition(int i, int i1)
+        {
+            throw new NotImplementedException();
         }
     }
 }
