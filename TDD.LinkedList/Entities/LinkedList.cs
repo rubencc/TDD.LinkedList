@@ -45,10 +45,5 @@ namespace TDD.LinkedList
             throw new NotImplementedException();
         }
 
-
-        public string Search(string secondElement)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
