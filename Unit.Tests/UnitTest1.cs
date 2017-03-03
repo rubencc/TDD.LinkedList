@@ -156,6 +156,23 @@ namespace Unit.Tests
         }
 
         [TestMethod]
+        public void T13_InsertAt_Succeed()
+        {
+            LinkedList<string> lst = new LinkedList<string>();
+            lst.Add("primer elemento");
+            lst.Add("segundo elemento");
+
+            string elementToInsert = "Inserted element";
+
+            lst.InsertAt(1, elementToInsert);
+            
+            int returnedIndex = lst.Index(elementToInsert);
+
+            returnedIndex.Should().Be(1);
+
+        }
+
+        [TestMethod]
         public void T14_Remove_By_Index()
         {
             LinkedList<string> lst = new LinkedList<string>();
