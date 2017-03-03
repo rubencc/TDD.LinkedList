@@ -43,8 +43,7 @@ namespace Unit.Tests
             lst.Add("primer elemento");
             lst.Add("second elemento");
 
-            <T> result = new <T>();
-            result = lst.Search("second element");
+            string result = lst.Search("second element");
 
             result.ToString().Should().Be("second element");
         }
