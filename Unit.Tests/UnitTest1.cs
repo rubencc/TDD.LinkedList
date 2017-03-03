@@ -23,10 +23,12 @@ namespace Unit.Tests
         public void T2_Add_Element_Failed()
         {
             LinkedList<string> lst = new LinkedList<string>();
-            lst.Add("primer elemento");
+            lst.Add(null);
 
             lst.Count().Should().Be(0);
         }
+
+        
 
     }
 }
