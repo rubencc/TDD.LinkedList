@@ -12,31 +12,42 @@ namespace Unit.Tests
         [TestMethod]
         public void T1_Add_Element_Succeed()
         {
+            //Arrange
             LinkedList<string> lst = new LinkedList<string>();
             lst.Add("primer elemento");
 
+            //Act
             lst.Count().Should().Be(1);
+
+            //Assert
             lst.Get().Should().Be("primer elemento");
         }
 
         [TestMethod]
         public void T2_Add_Element_Failed()
         {
+            //Ararange
             LinkedList<string> lst = new LinkedList<string>();
+
+            //Act
             lst.Add(null);
 
+            //Assert
             lst.Count().Should().Be(0);
         }
 
         [TestMethod]
         public void T3_Contains_Element_Succeed()
         {
+            //Arrange
             LinkedList<string> lst = new LinkedList<string>();
             lst.Add("primer elemento");
             lst.Add("second elemento");
 
+            //Act
             bool result = lst.Contains("second element");
 
+            //Assert
             result.Should().BeTrue();
         }
 
