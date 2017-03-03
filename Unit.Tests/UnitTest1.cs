@@ -29,14 +29,6 @@ namespace Unit.Tests
         }
 
         [TestMethod]
-        public void T5_Count_EmptyList_Succeed()
-        {
-            LinkedList<string> lst = new LinkedList<string>();
-            
-            lst.Count().Should().Be(0);
-        }
-
-        [TestMethod]
         public void T3_Search_Element_Suceed()
         {
             LinkedList<string> lst = new LinkedList<string>();
@@ -67,6 +59,26 @@ namespace Unit.Tests
         }
 
         [TestMethod]
+        public void T5_Count_EmptyList_Succeed()
+        {
+            LinkedList<string> lst = new LinkedList<string>();
+            
+            lst.Count().Should().Be(0);
+        }
+
+
+        [TestMethod]
+        public void T6_Count_OneElementList_Succeed()
+        {
+            LinkedList<string> lst = new LinkedList<string>();
+            lst.Add("primer elemento");
+
+            lst.Count().Should().Be(1);
+
+        }
+
+
+        [TestMethod]
         public void T7_Remove_Element_Failed()
         {
             //Arrange
@@ -83,15 +95,7 @@ namespace Unit.Tests
 
             lst.Should().NotBeNull(rtn);
         }
-        [TestMethod]
-        public void T6_Count_OneElementList_Succeed()
-        {
-            LinkedList<string> lst = new LinkedList<string>();
-            lst.Add("primer elemento");
-
-            lst.Count().Should().Be(1);
-            
-        }
+       
 
         [TestMethod]
         public void T8_Add_TwoElements_Succeed()
