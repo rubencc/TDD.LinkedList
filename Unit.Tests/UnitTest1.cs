@@ -93,6 +93,18 @@ namespace Unit.Tests
             
         }
 
+        [TestMethod]
+        public void T8_Add_TwoElements_Succeed()
+        {
+            LinkedList<string> lst = new LinkedList<string>();
+            lst.Add("primer elemento");
+            lst.Add("segundo elemento");
+
+            lst.Count().Should().Be(2);
+            lst.Get().Should().Be("primer elemento");
+            lst.Get().Should().Be("segundo elemento");
+        }
+
 
     }
 }
