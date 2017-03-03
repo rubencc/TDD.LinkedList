@@ -36,6 +36,16 @@ namespace Unit.Tests
             lst.Count().Should().Be(0);
         }
 
+        [TestMethod]
+        public void T6_Count_OneElementList_Succeed()
+        {
+            LinkedList<string> lst = new LinkedList<string>();
+            lst.Add("primer elemento");
+
+            lst.Count().Should().Be(1);
+            
+        }
+
 
     }
 }
