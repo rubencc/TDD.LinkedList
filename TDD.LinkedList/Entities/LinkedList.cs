@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using System.Text;
 
 namespace TDD.LinkedList
@@ -7,20 +9,27 @@ namespace TDD.LinkedList
     public sealed class LinkedList<T>
         where T : class
     {
-       
+
+        private List<T> list;
+
+        public LinkedList()
+        {
+            this.list = new List<T>();
+        }
+
         public int Count()
         {
-            throw new NotImplementedException();
+            return list.Count;
         }
 
-        public void Add(string v)
+        public void Add(T v)
         {
-            throw new NotImplementedException();
+            list.Add(v);
         }
 
-        public Node<T> Get()
+        public T Get()
         {
-            throw new NotImplementedException();
+            return this.list.Last();
         }
     }
 }
