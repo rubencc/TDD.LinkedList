@@ -29,15 +29,15 @@ namespace Unit.Tests
         }
 
         [TestMethod]
-        public void T3_Search_Element_Suceed()
+        public void T3_Contains_Element_Succeed()
         {
             LinkedList<string> lst = new LinkedList<string>();
             lst.Add("primer elemento");
             lst.Add("second elemento");
 
-            string result = lst.Search("second element");
+            bool result = lst.Contains("second element");
 
-            result.ToString().Should().Be("second element");
+            result.Should().BeTrue();
         }
 
         [TestMethod]
@@ -53,9 +53,9 @@ namespace Unit.Tests
             lst.Remove("primer elemento");
 
             //Assert
-            string rtn = lst.Search("primer elemento");
+            bool rtn = lst.Contains("primer elemento");
 
-            lst.Should().BeNull(rtn);
+            rtn.Should().BeTrue();
         }
 
         [TestMethod]
@@ -89,11 +89,11 @@ namespace Unit.Tests
             //Act
 
             lst.Remove("not exist element");
-            string rtn = lst.Search("not exist element");
+            bool rtn = lst.Contains("not exist element");
 
             //Assert
 
-            lst.Should().NotBeNull(rtn);
+            rtn.Should().BeFalse();
         }
        
 
