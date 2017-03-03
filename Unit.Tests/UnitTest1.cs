@@ -10,7 +10,7 @@ namespace Unit.Tests
     public class LinkedListTests
     {
         [TestMethod]
-        public void T1_Add_Node()
+        public void T1_Add_Element_Succeed()
         {
             LinkedList<string> lst = new LinkedList<string>();
             lst.Add("primer elemento");
