@@ -19,5 +19,14 @@ namespace Unit.Tests
             lst.Get().Should().Be("primer elemento");
         }
 
+        [TestMethod]
+        public void T2_Add_Element_Failed()
+        {
+            LinkedList<string> lst = new LinkedList<string>();
+            lst.Add("primer elemento");
+
+            lst.Count().Should().Be(0);
+        }
+
     }
 }
