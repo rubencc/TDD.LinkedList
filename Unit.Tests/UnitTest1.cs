@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TDD.LinkedList;
@@ -312,6 +313,8 @@ namespace Unit.Tests
 
         #endregion
 
+        #region Change Element
+
         [TestMethod]
         public void T18_Change_Element_Position_Succeed()
         {
@@ -346,7 +349,7 @@ namespace Unit.Tests
             result.Should().Be(true);
         }
 
-
+        #endregion
 
     }
 }
