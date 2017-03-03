@@ -71,6 +71,21 @@ namespace Unit.Tests
             result.Should().BeTrue();
         }
 
+        [TestMethod]
+        public void T17_Contains_Element_Failed()
+        {
+            //Arrange
+            LinkedList<string> lst = new LinkedList<string>();
+            lst.Add("first element");
+            lst.Add("second element");
+
+            //Act
+            bool result = lst.Contains("not exists element");
+
+            //Assert
+            result.Should().BeFalse();
+        }
+
         #endregion
 
         #region Remove Element
