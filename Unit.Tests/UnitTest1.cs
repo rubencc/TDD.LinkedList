@@ -109,6 +109,17 @@ namespace Unit.Tests
             lst.Get().Should().Be("segundo elemento");
         }
 
+        [TestMethod]
+        public void T10_Get_Index_Succeed()
+        {
+            LinkedList<string> lst = new LinkedList<string>();
+            lst.Add("primer elemento");
+            lst.Add("segundo elemento");
+
+            int index = lst.Index("segundo elemento");
+            index.Should().Be(1);
+        }
+
 
     }
 }
