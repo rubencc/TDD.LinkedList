@@ -67,7 +67,7 @@ namespace Unit.Tests
         }
 
         [TestMethod]
-        public void T4_Remove_Element_Failed()
+        public void T7_Remove_Element_Failed()
         {
             //Arrange
             LinkedList<string> lst = new LinkedList<string>();
