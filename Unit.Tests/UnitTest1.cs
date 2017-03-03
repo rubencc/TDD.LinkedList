@@ -133,18 +133,6 @@ namespace Unit.Tests
         }
 
         [TestMethod]
-        public void T11_Clear_Failed()
-        {
-            LinkedList<string> lst = new LinkedList<string>();
-            lst.Add("primer elemento");
-            lst.Add("segundo elemento");
-            lst.Clear();
-
-            lst.Count().Should().Be(2);
-
-        }
-
-        [TestMethod]
         public void T12_Get_Index_Not_Found()
         {
             LinkedList<string> lst = new LinkedList<string>();
@@ -188,5 +176,18 @@ namespace Unit.Tests
             returnedIndex.Should().Be(-1);
 
         }
+        [TestMethod]
+        public void T14_Remove_By_Index()
+        {
+            LinkedList<string> lst = new LinkedList<string>();
+            lst.Add("primer elemento");
+            lst.Add("segundo elemento");
+            lst.Add("tercero elemento");
+            lst.Add("cuarto elemento");
+
+            bool result = lst.RemoveByIndex(2);
+            result.Should().Be(true);
+        }
+
     }
 }
