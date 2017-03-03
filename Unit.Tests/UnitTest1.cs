@@ -9,6 +9,9 @@ namespace Unit.Tests
     [TestClass]
     public class LinkedListTests
     {
+
+        #region Add Element
+
         [TestMethod]
         public void T1_Add_Element_Succeed()
         {
@@ -37,6 +40,23 @@ namespace Unit.Tests
         }
 
         [TestMethod]
+        public void T8_Add_TwoElements_Succeed()
+        {
+            //Arrange
+            LinkedList<string> lst = new LinkedList<string>();
+            lst.Add("primer elemento");
+            lst.Add("segundo elemento");
+
+            //Assert
+            lst.Count().Should().Be(2);
+            lst.Get().Should().Be("primer elemento");
+            lst.Get().Should().Be("segundo elemento");
+        }
+        #endregion
+
+        #region Contains Element
+
+        [TestMethod]
         public void T3_Contains_Element_Succeed()
         {
             //Arrange
@@ -50,6 +70,10 @@ namespace Unit.Tests
             //Assert
             result.Should().BeTrue();
         }
+
+        #endregion
+
+        #region Remove Element
 
         [TestMethod]
         public void T4_Remove_Element_Succeed()
@@ -65,6 +89,24 @@ namespace Unit.Tests
             bool rtn = lst.Contains("primer elemento");
             rtn.Should().BeTrue();
         }
+
+        [TestMethod]
+        public void T7_Remove_Element_Failed()
+        {
+            //Arrange
+            LinkedList<string> lst = new LinkedList<string>();
+            lst.Add("not exist element");
+
+            //Act
+            lst.Remove("not exist element");
+            bool rtn = lst.Contains("not exist element");
+
+            //Assert
+            rtn.Should().BeFalse();
+        }
+        #endregion
+
+        #region Count
 
         [TestMethod]
         public void T5_Count_EmptyList_Succeed()
@@ -87,38 +129,9 @@ namespace Unit.Tests
             //Assert
             lst.Count().Should().Be(1);
         }
+        #endregion
 
-
-        [TestMethod]
-        public void T7_Remove_Element_Failed()
-        {
-            //Arrange
-            LinkedList<string> lst = new LinkedList<string>();
-            lst.Add("not exist element");
-
-            //Act
-            lst.Remove("not exist element");
-            bool rtn = lst.Contains("not exist element");
-
-            //Assert
-            rtn.Should().BeFalse();
-        }
-
-
-        [TestMethod]
-        public void T8_Add_TwoElements_Succeed()
-        {
-            //Arrange
-            LinkedList<string> lst = new LinkedList<string>();
-            lst.Add("primer elemento");
-            lst.Add("segundo elemento");
-
-            //Assert
-            lst.Count().Should().Be(2);
-            lst.Get().Should().Be("primer elemento");
-            lst.Get().Should().Be("segundo elemento");
-        }
-
+        #region Clear
         [TestMethod]
         public void T9_Clear_Succeed()
         {
@@ -133,7 +146,9 @@ namespace Unit.Tests
             //Assert
             lst.Count().Should().Be(0);
         }
+        #endregion
 
+        #region Get Index
         [TestMethod]
         public void T10_Get_Index_Succeed()
         {
@@ -163,7 +178,9 @@ namespace Unit.Tests
             //Assert
             index.Should().Be(-1);
         }
+        #endregion
 
+        #region InsertAt
         [TestMethod]
         public void T12_InsertAt_Succeed()
         {
@@ -199,7 +216,9 @@ namespace Unit.Tests
             //Assert
             returnedIndex.Should().Be(-1);
         }
+        #endregion
 
+        #region Remove By Index
         [TestMethod]
         public void T14_Remove_By_Index()
         {
@@ -233,6 +252,7 @@ namespace Unit.Tests
             //Assert
             result.Should().Be(false);
         }
+        #endregion
 
     }
 }
