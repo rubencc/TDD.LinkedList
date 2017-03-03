@@ -309,6 +309,23 @@ namespace Unit.Tests
             result.Should().Be(true);
         }
 
+        [TestMethod]
+        public void T20_Change_Element_Position_Failed()
+        {
+            //Arrange
+            LinkedList<string> lst = new LinkedList<string>();
+            lst.Add("primer elemento");
+            lst.Add("cuarto elemento");
+            lst.Add("tercero elemento");
+            lst.Add("segundo elemento");
+
+            //Act
+            bool result = lst.ChangePosition(1, 7);
+
+            //Assert
+            result.Should().Be(true);
+        }
+
 
 
     }
