@@ -40,7 +40,7 @@ namespace TDD.LinkedList
             throw new NotImplementedException();
         }
 
-        public string Search(string v)
+        public bool Contains(string v)
         {
             throw new NotImplementedException();
         }
