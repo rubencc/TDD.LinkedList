@@ -71,6 +71,21 @@ namespace Unit.Tests
             result.Should().BeTrue();
         }
 
+        [TestMethod]
+        public void T17_Contains_Element_Failed()
+        {
+            //Arrange
+            LinkedList<string> lst = new LinkedList<string>();
+            lst.Add("first element");
+            lst.Add("second element");
+
+            //Act
+            bool result = lst.Contains("not exists element");
+
+            //Assert
+            result.Should().BeFalse();
+        }
+
         #endregion
 
         #region Remove Element
@@ -296,5 +311,25 @@ namespace Unit.Tests
         }
 
         #endregion
+
+        [TestMethod]
+        public void T18_Change_Element_Position_Succeed()
+        {
+            //Arrange
+            LinkedList<string> lst = new LinkedList<string>();
+            lst.Add("primer elemento");
+            lst.Add("cuarto elemento");
+            lst.Add("tercero elemento");
+            lst.Add("segundo elemento");
+
+            //Act
+            bool result = lst.ChangePosition(1,3);
+
+            //Assert
+            result.Should().Be(true);
+        }
+
+
+
     }
 }

@@ -68,5 +68,10 @@ namespace TDD.LinkedList
         {
             throw new NotImplementedException();
         }
+
+        public bool ChangePosition(int i, int i1)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
