@@ -234,5 +234,24 @@ namespace Unit.Tests
             result.Should().Be(false);
         }
 
+        [TestMethod]
+        public void T18_Change_Element_Position_Succeed()
+        {
+            //Arrange
+            LinkedList<string> lst = new LinkedList<string>();
+            lst.Add("primer elemento");
+            lst.Add("cuarto elemento");
+            lst.Add("tercero elemento");
+            lst.Add("segundo elemento");
+
+            //Act
+            bool result = lst.ChangePosition(1,3);
+
+            //Assert
+            result.Should().Be(true);
+        }
+
+
+
     }
 }
