@@ -122,6 +122,17 @@ namespace Unit.Tests
         }
 
         [TestMethod]
+        public void T10_Get_Index_Succeed()
+        {
+            LinkedList<string> lst = new LinkedList<string>();
+            lst.Add("primer elemento");
+            lst.Add("segundo elemento");
+
+            int index = lst.Index("segundo elemento");
+            index.Should().Be(1);
+        }
+
+        [TestMethod]
         public void T11_Clear_Failed()
         {
             LinkedList<string> lst = new LinkedList<string>();
@@ -133,19 +144,16 @@ namespace Unit.Tests
 
         }
 
-        
-
         [TestMethod]
-        public void T10_Get_Index_Succeed()
+        public void T10_Get_Index_Not_Found()
         {
             LinkedList<string> lst = new LinkedList<string>();
             lst.Add("primer elemento");
             lst.Add("segundo elemento");
 
-            int index = lst.Index("segundo elemento");
-            index.Should().Be(1);
+            int index = lst.Index("tercer elemento");
+            index.Should().Be(-1);
         }
-
 
     }
 }
