@@ -50,5 +50,9 @@ namespace TDD.LinkedList
             throw new NotImplementedException();
         }
 
+        public void InsertAt(int v, string elementToInsert)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
