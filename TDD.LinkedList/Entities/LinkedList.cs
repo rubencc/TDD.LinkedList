@@ -54,5 +54,10 @@ namespace TDD.LinkedList
         {
             throw new NotImplementedException();
         }
+
+        public bool RemoveByIndex(int i)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
