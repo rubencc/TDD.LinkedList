@@ -145,7 +145,7 @@ namespace Unit.Tests
         }
 
         [TestMethod]
-        public void T10_Get_Index_Not_Found()
+        public void T12_Get_Index_Not_Found()
         {
             LinkedList<string> lst = new LinkedList<string>();
             lst.Add("primer elemento");
