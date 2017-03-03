@@ -275,6 +275,26 @@ namespace Unit.Tests
             lst.Get().Should().Be("primer elemento");
         }
 
+        [TestMethod]
+        public void T19_Reverse_Failed()
+        {
+            //Arrange
+            LinkedList<string> lst = new LinkedList<string>();
+            lst.Add("primer elemento");
+            lst.Add("segundo elemento");
+            lst.Add("tercero elemento");
+            lst.Add("cuarto elemento");
+
+            //Act
+            lst.Reverse();
+
+            //Assert
+            lst.Get().Should().NotBe("cuarto elemento");
+            lst.Get().Should().NotBe("tercero elemento");
+            lst.Get().Should().NotBe("segundo elemento");
+            lst.Get().Should().NotBe("primer elemento");
+        }
+
         #endregion
     }
 }
