@@ -18,7 +18,7 @@ namespace TDD.LinkedList
             throw new NotImplementedException();
         }
 
-        public Node<T> Get()
+        public T Get()
         {
             throw new NotImplementedException();
         }
