@@ -26,7 +26,7 @@ namespace Unit.Tests
         [TestMethod]
         public void T2_Add_Element_Failed()
         {
-            //Ararange
+            //Arrange
             LinkedList<string> lst = new LinkedList<string>();
 
             //Act
@@ -58,22 +58,21 @@ namespace Unit.Tests
             LinkedList<string> lst = new LinkedList<string>();
             lst.Add("primer elemento");
 
-
             //Act
-
             lst.Remove("primer elemento");
 
             //Assert
             bool rtn = lst.Contains("primer elemento");
-
             rtn.Should().BeTrue();
         }
 
         [TestMethod]
         public void T5_Count_EmptyList_Succeed()
         {
+            //Arrange
             LinkedList<string> lst = new LinkedList<string>();
 
+            //Assert
             lst.Count().Should().Be(0);
         }
 
@@ -81,11 +80,12 @@ namespace Unit.Tests
         [TestMethod]
         public void T6_Count_OneElementList_Succeed()
         {
+            //Arrange
             LinkedList<string> lst = new LinkedList<string>();
             lst.Add("primer elemento");
 
+            //Assert
             lst.Count().Should().Be(1);
-
         }
 
 
@@ -96,14 +96,11 @@ namespace Unit.Tests
             LinkedList<string> lst = new LinkedList<string>();
             lst.Add("not exist element");
 
-
             //Act
-
             lst.Remove("not exist element");
             bool rtn = lst.Contains("not exist element");
 
             //Assert
-
             rtn.Should().BeFalse();
         }
 
@@ -111,10 +108,12 @@ namespace Unit.Tests
         [TestMethod]
         public void T8_Add_TwoElements_Succeed()
         {
+            //Arrange
             LinkedList<string> lst = new LinkedList<string>();
             lst.Add("primer elemento");
             lst.Add("segundo elemento");
 
+            //Assert
             lst.Count().Should().Be(2);
             lst.Get().Should().Be("primer elemento");
             lst.Get().Should().Be("segundo elemento");
@@ -123,93 +122,115 @@ namespace Unit.Tests
         [TestMethod]
         public void T9_Clear_Succeed()
         {
+            //Arrange
             LinkedList<string> lst = new LinkedList<string>();
             lst.Add("primer elemento");
             lst.Add("segundo elemento");
+
+            //Act
             lst.Clear();
 
+            //Assert
             lst.Count().Should().Be(0);
-
         }
 
         [TestMethod]
         public void T10_Get_Index_Succeed()
         {
+            //Arrange
             LinkedList<string> lst = new LinkedList<string>();
             lst.Add("primer elemento");
             lst.Add("segundo elemento");
 
+            //Act
             int index = lst.Index("segundo elemento");
+
+            //Assert
             index.Should().Be(1);
         }
 
         [TestMethod]
         public void T12_Get_Index_Not_Found()
         {
+            //Arrange
             LinkedList<string> lst = new LinkedList<string>();
             lst.Add("primer elemento");
             lst.Add("segundo elemento");
 
+            //Act
             int index = lst.Index("tercer elemento");
+
+            //Assert
             index.Should().Be(-1);
         }
 
         [TestMethod]
         public void T13_InsertAt_Succeed()
         {
+            //Arrange
             LinkedList<string> lst = new LinkedList<string>();
             lst.Add("primer elemento");
             lst.Add("segundo elemento");
 
             string elementToInsert = "Inserted element";
 
+            //Act
             lst.InsertAt(1, elementToInsert);
 
+            //Assert
             int returnedIndex = lst.Index(elementToInsert);
-
             returnedIndex.Should().Be(1);
-
         }
 
         [TestMethod]
         public void T15_InsertAt_Failed()
         {
+            //Arrange
             LinkedList<string> lst = new LinkedList<string>();
             lst.Add("primer elemento");
             lst.Add("segundo elemento");
 
             string elementToInsert = "Inserted element";
 
+            //Act
             lst.InsertAt(10, elementToInsert);
-
             int returnedIndex = lst.Index(elementToInsert);
 
+            //Assert
             returnedIndex.Should().Be(-1);
-
         }
+
         [TestMethod]
         public void T14_Remove_By_Index()
         {
+            //Arrange
             LinkedList<string> lst = new LinkedList<string>();
             lst.Add("primer elemento");
             lst.Add("segundo elemento");
             lst.Add("tercero elemento");
             lst.Add("cuarto elemento");
 
+            //Act
             bool result = lst.RemoveByIndex(2);
+
+            //Assert
             result.Should().Be(true);
         }
 
         [TestMethod]
         public void T16_Remove_By_Index_Failed()
         {
+            //Arrange
             LinkedList<string> lst = new LinkedList<string>();
             lst.Add("primer elemento");
             lst.Add("segundo elemento");
             lst.Add("tercero elemento");
             lst.Add("cuarto elemento");
 
+            //Act
             bool result = lst.RemoveByIndex(6);
+
+            //Assert
             result.Should().Be(false);
         }
 
