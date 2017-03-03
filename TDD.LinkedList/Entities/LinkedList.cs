@@ -35,12 +35,12 @@ namespace TDD.LinkedList
             return this.list.Last();
         }
 
-        public void Remove(string v)
+        public void Remove(T v)
         {
             throw new NotImplementedException();
         }
 
-        public bool Contains(string v)
+        public bool Contains(T v)
         {
             throw new NotImplementedException();
         }
@@ -50,16 +50,21 @@ namespace TDD.LinkedList
             throw new NotImplementedException();
         }
 
-        public void InsertAt(int v, string elementToInsert)
+        public void InsertAt(int v, T elementToInsert)
         {
             throw new NotImplementedException();
         }
-        public int Index(string segundoElemento)
+        public int Index(T segundoElemento)
         {
             throw new NotImplementedException();
         }
 
         public bool RemoveByIndex(int i)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Reverse()
         {
             throw new NotImplementedException();
         }
