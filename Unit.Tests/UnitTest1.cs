@@ -28,7 +28,14 @@ namespace Unit.Tests
             lst.Count().Should().Be(0);
         }
 
-        
+        [TestMethod]
+        public void T5_Count_EmptyList_Succeed()
+        {
+            LinkedList<string> lst = new LinkedList<string>();
+            
+            lst.Count().Should().Be(0);
+        }
+
 
     }
 }
